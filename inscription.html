@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscrivez-vous à l'ENI Memory</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="inscription">
+    <header id="header">
+      <div>
+        <h1 id="titreGeneral">ENI - <strong>MEMORY </strong>- S'inscrire</h1>
+      </div>
+    </header>
+
+    <nav id="menuPrincipal">
+      <a href="index.html">Accueil</a>
+      <a href="inscription.html">S'inscrire</a>
+      <a href="connexion.html">Se connecter</a>
+      <a href="profil.html">Profil</a>
+      <a href="jouer.html">Jouer</a>
+    </nav>
+
+    <div id="formInscription">
+      <div>
+        <fieldset>
+            <h2>Inscrivez-vous</h2>
+            </h2>
+          <form action="#" method="post">
+            <div class="form">
+              <label for="username">Nom d'utilisateur</label>
+              <br>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="3 caractères minimum"
+                required
+                autofocus
+                title="Nom d'utilisateur"
+                pattern="[a-zA-Z]+"
+              />
+            </div>
+            <div class="form">
+                <label for="usermail">Entrez votre email</label>
+                <br>
+                <input
+                type="text"
+                name="usermail"
+                id="usermail"
+                placeholder="3 caractères minimum">
+            </div>
+            <div class="form">
+                <label for="password">Mot de passe</label>
+                <br>
+                <input
+                type="password"
+                name="password"
+                id="password"
+                pattern="^(?=.*[!@#$%^&*\-_+=])(?=.*\d).{6,}$"
+                placeholder="Votre mot de passe">
+            </div>
+            <div class="form">
+                <label for="passwordbis">Mot de passe</label>
+                <br>
+                <input
+                type="password"
+                name="passwordbis"
+                id="passwordbis"
+                pattern="^(?=.*[!@#$%^&*\-_+=])(?=.*\d).{6,}$"
+                placeholder="Confirmez le mot de passe">
+            </div>
+            <div id="boutonsFormulaire">
+             <input type="submit" value="Création du compte" class="formBtn">
+            <input type="reset" value="Annuler" class="formBtn">    
+            </div>
+            
+          </form>
+        </fieldset>
+      </div>
+    </div>
+  </body>
+</html>
