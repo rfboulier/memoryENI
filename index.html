@@ -7,11 +7,62 @@
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="accueil">
     <header id="header">
-     <div><h1> Bienvenue sur ENI Memory</h1></div>
-     <div id="iconeConnexion"><img src="ressources1/check.svg" alt="icône de connexion" height="25px" width="25px"> </div>
+      <div><h1 id="titreGeneral">ENI - <strong>MEMORY </strong>- Accueil</h1></div>
     </header>
-    
+
+    <nav id="menuPrincipal">
+      <a href="index.html">Accueil</a>
+      <a href="inscription.html">S'inscrire</a>
+      <a href="connexion.html">Se connecter</a>
+      <a href="profil.html">Profil</a>
+      <a href="jouer.html">Jouer</a>
+    </nav>
+
+    <div id="presentation">
+      <div id="presentationJeu">
+        <h2>A vous de jouer !</h2>
+        <p>
+          Bienvenue sur le site du Memory de l'ENI !
+          Venez jouer avec nous et faites le meilleur score possible.
+        </p>
+      </div>
+      <div id="reglesDuJeu">
+        <h2>Règles du jeu :</h2>
+        <p>
+          <ul>
+            <li>
+              Retournez deux cartes. Si les images sont identiques, le jeu
+              laisse les cartes face visible.
+            </li>
+            <li>
+              Si les images sont différentes, les cartes se retournent faces
+              cachées là où elles étaient.
+            </li>
+            <li>
+              La partie est terminée lorsque toutes les cartes ont été
+              assemblées par paires.
+            </li>
+        </ul>
+        </p>
+      </div>
+      <div id="imageIllus1">
+        <img
+          src="ressources1/imageIllus1.png"
+          alt="image du jeu"
+          title="Image du jeu">
+      </div>
+        <div>
+          <p>
+            Si vous voulez vous souvenir de votre score, inscrivez-vous via le <a href="inscription.html">formulaire</a>.
+            <br>
+            Le jeu garde les <strong>5 meilleurs</strong> scores.
+            <br>
+            Si vous voulez relancer une partie, appuyez sur la barre espace.
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
