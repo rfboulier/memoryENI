@@ -95,7 +95,7 @@ fieldset {
 }
 
 label {
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 input {
@@ -164,4 +164,29 @@ input {
   margin-bottom: 20%;
   padding: 3%;
   width: auto;
+}
+
+/* Page de profil */
+
+#formProfil {
+  border-width: 0px;
+  border-radius: 10px;
+  background-color: #333;
+  color: whitesmoke;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 20%;
+  padding: 3%;
+  width: auto;
+}
+
+#ppUser {
+  display: block;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  
 }
