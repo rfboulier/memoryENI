@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inscrivez-vous à l'ENI Memory</title>
+    <title>Inscription - ENI MEMORY</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
   </head>
   <body id="inscription">
     <header id="header">
@@ -22,10 +23,9 @@
     </nav>
 
     <div id="formInscription">
-      <div>
-        <fieldset>
-            <h2>Inscrivez-vous</h2>
-            </h2>
+      
+        <fieldset id="formulaireInscription">
+            <h2 class="titreFormulaire">Inscrivez-vous</h2>
           <form action="#" method="post">
             <div class="form">
               <label for="username">Nom d'utilisateur</label>
@@ -34,22 +34,24 @@
                 type="text"
                 name="username"
                 id="username"
-                placeholder="3 caractères minimum"
+                placeholder="Doit contenir uniquement des lettres (3 caractères minimum)"
                 required
                 autofocus
                 title="Nom d'utilisateur"
                 pattern="[a-zA-Z]+"
               />
             </div>
+            <span id="validationUsername"></span>
             <div class="form">
-                <label for="usermail">Entrez votre email</label>
+                <label for="userMail">Entrez votre email</label>
                 <br>
                 <input
                 type="text"
-                name="usermail"
-                id="usermail"
-                placeholder="3 caractères minimum">
+                name="userMail"
+                id="userMail"
+                placeholder="Entrez une adresse mail valide">
             </div>
+            <span id="validationUserMail"></span>
             <div class="form">
                 <label for="password">Mot de passe</label>
                 <br>
@@ -58,20 +60,25 @@
                 name="password"
                 id="password"
                 pattern="^(?=.*[!@#$%^&*\-_+=])(?=.*\d).{6,}$"
-                placeholder="Votre mot de passe">
-            </div>
+                placeholder="Doit contenir au moins un chiffre et un caractère spécial (6 caractères minimum)">
+                <div id="validationPwd">
+                <span id="pwdStrength"></span>
+           </div>
+          </div>
             <div class="form">
-                <label for="passwordbis">Mot de passe</label>
+                <label for="passwordBis">Mot de passe</label>
                 <br>
                 <input
                 type="password"
-                name="passwordbis"
-                id="passwordbis"
+                name="passwordBis"
+                id="passwordBis"
                 pattern="^(?=.*[!@#$%^&*\-_+=])(?=.*\d).{6,}$"
-                placeholder="Confirmez le mot de passe">
+                placeholder="Doit être identique au premier mot de passe inscrit">
+                <br>
+                <span id="validationPwdBis"></span>
             </div>
             <div id="boutonsFormulaire">
-             <input type="submit" value="Création du compte" class="formBtn">
+             <input type="submit" value="Création du compte" class="formBtn" id="validerInscription" disabled>
             <input type="reset" value="Annuler" class="formBtn">    
             </div>
             
