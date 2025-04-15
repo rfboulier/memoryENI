@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion - ENI MEMORY</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="menuPrincipal">
+      <a href="index.html">Accueil</a>
+      <a href="inscription.html">S'inscrire</a>
+      <a href="connexion.html">Se connecter</a>
+      <a href="profil.html">Profil</a>
+      <a href="jouer.html">Jouer</a>
+    </nav>
+
+    <div id="formConnexion">
+      <fieldset id="formulaireConnexion">
+        <h2>Connectez-vous</h2>
+        <form action="#" method="post">
+          <div class="form">
+            <label for="usernameCo">Nom d'utilisateur</label>
+            <br />
+            <input type="text" name="usernameCo" id="usernameCo"
+            placeholder="Votre pseudo" required autofocus title="Nom
+            d'utilisateur" pattern="[a-zA-Z]+"
+            />
+            <div form="form">
+              <label for="passwordCo">Mot de passe</label>
+              <br>
+              <input type="password"
+              name="passwordCo"
+              id="passwordCo"
+              placeholder="Votre mot de passe"
+              required>
+            </div>
+            <div id="boutonsFormulaire">
+              <input type="submit" value="Connexion" class="formBtn">
+             <input type="reset" value="Annuler" class="formBtn">    
+             </div>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>
