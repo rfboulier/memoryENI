@@ -94,6 +94,10 @@ fieldset {
   text-align: center;
 }
 
+label {
+  margin-top: 5%;
+}
+
 input {
   width: 90%;
   background-color: transparent;
@@ -124,8 +128,26 @@ input {
   margin-top: 20px;
 }
 
+#validationUsername {
+  font-size: 11px;
+  padding-bottom: 2%;
+  color: #555;
+}
+
+#validationUserMail {
+  font-size: 11px;
+  padding-bottom: 2%;
+  color: #555;
+}
+
 #validationPwd {
-  font-size: 7px;
+  font-size: 11px;
+  padding-bottom: 2%;
+  color: #555;
+}
+
+#validationPwdBis {
+  font-size: 11px;
   padding-bottom: 2%;
   color: #555;
 }
