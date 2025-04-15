@@ -14,3 +14,59 @@
       <a href="profil.html">Profil</a>
       <a href="jouer.html">Jouer</a>
     </nav>
+
+    <div id="formProfil">
+      <fieldset>
+        <h2 class="titreFormulaire">Mon profil</h2>
+        <img id="ppUser" src="ressources1/question.svg" alt="Photo de profil">
+        <form action="#" method="post">
+          <div class="form">
+            <label for="userInscrit">Nom d'utilisateur</label>
+            <input
+              type="text"
+              name="userInscrit"
+              id="userInscrit"
+              title="Nom d'utilisateur"
+              pattern="[a-zA-Z]+"
+            />
+          </div>
+          <div class="form">
+            <label for="mailInscrit">Adresse mail</label>
+            <input
+              type="email"
+              name="mailInscrit"
+              id="userInscrit"
+              title="Nom d'utilisateur"
+            />
+          </div>
+          <div class="form">
+            <label for="choixJeu">Choix du memory</label>
+            <br>
+            <select name="choixJeu" id="choixJeu">
+              <option value="">Choisissez votre plateau</option>
+              <option value="alphabet">Alphabet</option>
+              <option value="Animaux">Animaux</option>
+              <option value="Animaux animés">Animaux animés</option>
+              <option value="Animaux domestiques">Animaux domestiques</option>
+              <option value="Chiens">Chiens</option>
+              <option value="Dinosaures">Dinosaures</option>
+              <option value="Légumes">Légumes</option>
+            </select>
+          </div>
+          <br>
+          <br>
+          <div class="form">
+            <label for="tailleJeu">Taille du plateau de jeu</label>
+            <br>
+            <select name="tailleJeu" id="tailleJeu">
+              <option value="">Choisissez la taille</option>
+              <option value="2par4">2 * 4</option>
+              <option value="4par3">4 * 3</option>
+              <option value="6par4">6 * 4</option>
+            </select>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>
