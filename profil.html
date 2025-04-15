@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profil - ENI Memory</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
   </head>
+
+  <header id="header">
+    <div>
+      <h1 id="titreGeneral">ENI  <strong> - MEMORY </strong>- Mon profil</h1>
+    </div>
+  </header>
+
   <body>
     <nav id="menuPrincipal">
       <a href="index.html">Accueil</a>
@@ -35,7 +43,7 @@
             <input
               type="email"
               name="mailInscrit"
-              id="userInscrit"
+              id="mailInscrit"
               title="Nom d'utilisateur"
             />
           </div>
@@ -45,14 +53,17 @@
             <select name="choixJeu" id="choixJeu">
               <option value="">Choisissez votre plateau</option>
               <option value="alphabet">Alphabet</option>
-              <option value="Animaux">Animaux</option>
-              <option value="Animaux animés">Animaux animés</option>
-              <option value="Animaux domestiques">Animaux domestiques</option>
-              <option value="Chiens">Chiens</option>
-              <option value="Dinosaures">Dinosaures</option>
-              <option value="Légumes">Légumes</option>
+              <option value="animaux">Animaux</option>
+              <option value="animauxAnimes">Animaux animés</option>
+              <option value="animauxDomestiques">Animaux domestiques</option>
+              <option value="chiens">Chiens</option>
+              <option value="dinosaures">Dinosaures</option>
+              <option value="legumes">Légumes</option>
             </select>
+            <div id="imageChoixJeu">
           </div>
+      </div>
+          
           <br>
           <br>
           <div class="form">
@@ -63,7 +74,7 @@
               <option value="2par4">2 * 4</option>
               <option value="4par3">4 * 3</option>
               <option value="6par4">6 * 4</option>
-            </select>
+            </select></div>
           </div>
         </form>
       </fieldset>
