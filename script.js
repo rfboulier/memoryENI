@@ -29,6 +29,8 @@ function init() {
         submit();
     });
 
+    document.getElementById("choixJeu").addEventListener("change", actualiserImage);
+    actualiserImage();
 
     // Appel initial des fonctions pour configurer l'état initial
     checkUsername();
@@ -36,6 +38,9 @@ function init() {
     comparePwd();
     pwdStrength();
     submit();
+    choixJeu();
+    actualiserImage();
+
 
 }
 
@@ -144,4 +149,8 @@ function submit() {
 }
 
 // Conservation des données
+
+
+// Affichage des images - choix du jeu - page profil
+
 
