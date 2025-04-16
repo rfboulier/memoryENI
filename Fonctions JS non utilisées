@@ -1,0 +1,40 @@
+function checkPwdLength() {
+    const password = document.getElementById("password").value;
+    const validation = document.getElementById("validationPwdLength");
+
+    if (password.length >= 6) {
+        validation.textContent = "✓ Le mot de passe contient au moins 6 caractères";
+            validation.style.color = "green";
+    } else {
+        validation.textContent = "✗ Le mot de passe doit contenir au moins 6 caractères";
+            validation.style.color = "red";
+    }
+}
+
+function checkPwdNumber() {
+    const password = document.getElementById("password").value;
+    const validation = document.getElementById("validationPwdNumber")
+
+        if (/[0-9]/.test(password)) {
+            validation.textContent = "✓ Le mot de passe contient un chiffre";
+            validation.style.color = "green";
+        } else {
+            validation.textContent = "✗ Le mot de passe doit contenir un chiffre";
+            validation.style.color = "red";
+        }
+}
+
+
+function checkPwdSpecial() {
+    const password = document.getElementById("password").value;
+    const validation = document.getElementById("validationPwdSpecial");
+
+    if (/[!@#$%^&*\-_+=]/.test(password)) {
+        validation.textContent = "✓ Le mot de passe contient un caractère spécial";
+        validation.style.color = "green";
+    } else {
+        validation.textContent = "✗ Le mot de passe doit contenir un caractère spécial";
+        validation.style.color = "red";
+    }
+    
+}
