@@ -1,90 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inscription - ENI MEMORY</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
-  <body id="inscription">
-    <header id="header">
-      <div>
-        <h1 id="titreGeneral">ENI - <strong>MEMORY </strong>- S'inscrire</h1>
-      </div>
-    </header>
 
-    <nav id="menuPrincipal">
-      <a href="index.html">Accueil</a>
-      <a href="inscription.html">S'inscrire</a>
-      <a href="connexion.html">Se connecter</a>
-      <a href="profil.html">Profil</a>
-      <a href="jouer.html">Jouer</a>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inscription - ENI MEMORY</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
 
-    <div id="formInscription">
-      
-        <fieldset>
-            <h2 class="titreFormulaire">Inscrivez-vous</h2>
-          <form action="#" method="post">
-            <div class="form">
-              <label for="username">Nom d'utilisateur</label>
-              <br>
-              <input
-                type="text"
-                name="username"
-                id="username"
-                placeholder="Doit contenir uniquement des lettres (3 caractères minimum)"
-                required
-                autofocus
-                title="Nom d'utilisateur"
-                pattern="[a-zA-Z]+"
-              />
-            </div>
-            <span id="validationUsername"></span>
-            <div class="form">
-                <label for="userMail">Entrez votre email</label>
-                <br>
-                <input
-                type="text"
-                name="userMail"
-                id="userMail"
-                placeholder="Entrez une adresse mail valide">
-            </div>
-            <span id="validationUserMail"></span>
-            <div class="form">
-                <label for="password">Mot de passe</label>
-                <br>
-                <input
-                type="password"
-                name="password"
-                id="password"
-                pattern="^(?=.*[!@#$%^&*\-_+=])(?=.*\d).{6,}$"
-                placeholder="Doit contenir au moins un chiffre et un caractère spécial (6 caractères minimum)">
-                <div id="validationPwd">
-                <span id="pwdStrength"></span>
-           </div>
-          </div>
-            <div class="form">
-                <label for="passwordBis">Mot de passe</label>
-                <br>
-                <input
-                type="password"
-                name="passwordBis"
-                id="passwordBis"
-                pattern="^(?=.*[!@#$%^&*\-_+=])(?=.*\d).{6,}$"
-                placeholder="Doit être identique au premier mot de passe inscrit">
-                <br>
-                <span id="validationPwdBis"></span>
-            </div>
-            <div id="boutonsFormulaire">
-             <input type="submit" value="Création du compte" class="formBtn" id="validerInscription" disabled>
-            <input type="reset" value="Annuler" class="formBtn">    
-            </div>
-            
-          </form>
-        </fieldset>
-      </div>
+<body id="inscription">
+  <header id="header">
+    <div>
+      <h1 id="titreGeneral">ENI - <strong>MEMORY </strong>- S'inscrire</h1>
     </div>
-  </body>
+  </header>
+
+  <nav id="menuPrincipal">
+    <a href="index.html">Accueil</a>
+    <a href="inscription.html">S'inscrire</a>
+    <a href="connexion.html">Se connecter</a>
+    <a href="profil.html">Profil</a>
+    <a href="jouer.html">Jouer</a>
+  </nav>
+
+  <div id="formInscription">
+    <fieldset>
+      <h2 class="titreFormulaire">Inscrivez-vous</h2>
+      <form id="formulaireInscription">
+        <div class="form">
+          <label for="username">Nom d'utilisateur</label>
+          <br />
+          <div class="inputImage">
+            <input type="text" name="username" id="username"
+              placeholder="Doit contenir uniquement des lettres (3 caractères minimum)" required autofocus
+              title="Nom d'utilisateur" pattern="[a-zA-Z]+" />
+            <img class="imagesVerif" id="usernameCheck" src="ressources1/check.svg" alt="validé" />
+            <img class="imagesVerif" id="usernameError" src="ressources1/error.svg" alt="erreur" />
+          </div>
+        </div>
+        <span id="validationUsername"></span>
+        <div class="form">
+          <label for="userMail">Entrez votre email</label>
+          <br />
+          <div class="inputImage">
+            <input type="text" name="userMail" id="userMail" placeholder="Entrez une adresse mail valide" />
+            <img class="imagesVerif" id="userMailCheck" src="ressources1/check.svg" alt="validé" />
+            <img class="imagesVerif" id="userMailError" src="ressources1/error.svg" alt="erreur" />
+          </div>
+        </div>
+        <span id="validationUserMail"></span>
+        <div class="form">
+          <label for="password">Mot de passe</label>
+          <br />
+          <div class="inputImage">
+            <input type="password" name="password" id="password" pattern="^(?=.*[!@#$%^&*\-_+=])(?=.*\d).{6,}$"
+              placeholder="Doit contenir au moins un chiffre et un caractère spécial (6 caractères minimum)" />
+            <img class="imagesVerif" id="passwordCheck" src="ressources1/check.svg" alt="validé" />
+            <img class="imagesVerif" id="passwordWarning" src="ressources1/warning.svg" alt="attention" />
+            <img class="imagesVerif" id="passwordError" src="ressources1/error.svg" alt="erreur" />
+          </div>
+            
+            <p id="consignePwd">Le mot de passe doit contenir au moins un chiffre et un caractère spécial (6 caractères minimum).</p>
+      
+        </div>
+        <div class="form">
+          <label for="passwordBis">Mot de passe</label>
+          <br />
+          <div class="inputImage">
+            <input type="password" name="passwordBis" id="passwordBis" pattern="^(?=.*[!@#$%^&*\-_+=])(?=.*\d).{6,}$"
+              placeholder="Doit être identique au premier mot de passe inscrit" />
+            <img class="imagesVerif" id="passwordBisCheck" src="ressources1/check.svg" alt="validé" />
+            <img class="imagesVerif" id="passwordBisError" src="ressources1/error.svg" alt="erreur" />
+          </div>
+          <div><span id="validationPwdBis"></span></div>
+        </div>
+
+        <div id="boutonsFormulaire">
+          <input type="submit" value="Création du compte" class="formBtn" id="validerInscription" disabled />
+          <input type="reset" value="Annuler" class="formBtn" />
+        </div>
+      </form>
+    </fieldset>
+  </div>
+</body>
+
 </html>
