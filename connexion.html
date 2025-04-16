@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connexion - ENI MEMORY</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
   </head>
 
   <header id="header">
@@ -23,27 +24,36 @@
     </nav>
 
     <div id="formConnexion">
-      <fieldset id="formulaireConnexion">
+      <fieldset>
         <h2>Connectez-vous</h2>
-        <form action="#" method="post">
+        <form id="formulaireConnexion">
           <div class="form">
             <label for="usernameCo">Nom d'utilisateur</label>
             <br />
+            <div class="inputImage">
             <input type="text" name="usernameCo" id="usernameCo"
             placeholder="Votre pseudo" required autofocus title="Nom
             d'utilisateur" pattern="[a-zA-Z]+"
             />
+            <img class="imagesVerif" id="usernameCoCheck" src="ressources1/check.svg" alt="validé" />
+              <img class="imagesVerif" id="usernameCoError" src="ressources1/error.svg" alt="erreur" />
+            </div>
             <div form="form">
+              
               <label for="passwordCo">Mot de passe</label>
               <br>
+              <div class="inputImage">
               <input type="password"
               name="passwordCo"
               id="passwordCo"
               placeholder="Votre mot de passe"
               required>
+              <img class="imagesVerif" id="passwordCoCheck" src="ressources1/check.svg" alt="validé" />
+              <img class="imagesVerif" id="passwordCoError" src="ressources1/error.svg" alt="erreur" />
+            </div>
             </div>
             <div id="boutonsFormulaire">
-              <input type="submit" value="Connexion" class="formBtn">
+              <input id="connexion" type="submit" value="Connexion" class="formBtn" disabled>
              <input type="reset" value="Annuler" class="formBtn">    
              </div>
           </div>

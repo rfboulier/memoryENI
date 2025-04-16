@@ -14,7 +14,6 @@ function init() {
     document.getElementById("password").addEventListener("input", function () {
         pwdStrength();
         comparePwd();
-        checkPassword();
         submit();
     });
     document.getElementById("passwordBis").addEventListener("input", function () {
@@ -28,6 +27,7 @@ function init() {
     comparePwd();
     pwdStrength();
     submit();
+    // connexion();
 
     document.getElementById("formulaireInscription").addEventListener("submit", function (event) {
         event.preventDefault();
@@ -37,6 +37,14 @@ function init() {
             window.location.href = 'connexion.html';
         }
     });
+
+    // document.getElementById("formulaireConnexion").addEventListener("submit", function (event) {
+    //     event.preventDefault();
+    //     connexion();
+    //     if (!document.getElementById("connexion").disabled) {
+    //         window.location.href = 'profil.html';
+    //     }
+    // });
 }
 
 function checkUsername() {
@@ -112,7 +120,9 @@ function pwdStrength() {
     const validation = document.getElementById('pwdStrength');
 
     if (password.length === 0) {
-        validation.textContent = "";
+        document.getElementById("passwordCheck").style.display = "none"
+        document.getElementById("passwordWarning").style.display = "none"
+        document.getElementById("passwordError").style.display = "none"
         return;
     }
 
@@ -206,3 +216,18 @@ function stockageUser() {
 
     localStorage.setItem('userData', JSON.stringify(userData));
 }
+
+// function connexion() {
+//     const userDataSauv = localStorage.getItem("userData");
+
+//  if (userDataSauv) {
+//     const userData = JSON.parse(userDataSauv);
+//     if (userData.username === document.getElementById("usernameCo").value) {
+//         document.getElementById("usernameCoCheck").style.display = "block"
+//     }
+//     if (userData.password === document.getElementById("passwordCo").value) {
+//         document.getElementById("passwordCoCheck").style.display = "block"
+//     }
+//  }
+
+// }

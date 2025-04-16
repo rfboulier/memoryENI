@@ -122,6 +122,12 @@ input {
   margin-bottom: 5%;
 }
 
+#pwdStrength {
+  font-size: 10px;
+  font-style:italic ;
+  color: #fdfdfd;
+}
+
 .imagesVerif {
   display: none;
   height: 20px;
