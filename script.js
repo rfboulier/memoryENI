@@ -37,14 +37,6 @@ function init() {
             window.location.href = 'connexion.html';
         }
     });
-
-    // document.getElementById("formulaireConnexion").addEventListener("submit", function (event) {
-    //     event.preventDefault();
-    //     connexion();
-    //     if (!document.getElementById("connexion").disabled) {
-    //         window.location.href = 'profil.html';
-    //     }
-    // });
 }
 
 function checkUsername() {
@@ -57,13 +49,16 @@ function checkUsername() {
     }
 
     // Vérif. storage
-    const userDataSauv = localStorage.getItem('userData');
+    const usersListSauv = localStorage.getItem('usersList');
     let isUsernameTaken = false;
 
-    if (userDataSauv) {
-        const userData = JSON.parse(userDataSauv);
-        if (userData.username === username) {
-            isUsernameTaken = true;
+    if (usersListSauv) {
+        const usersList = JSON.parse(usersListSauv);
+        for (let user of usersList) {
+            if (user.username === username) {
+                isUsernameTaken = true;
+                break;
+            }
         }
     }
 
@@ -75,8 +70,6 @@ function checkUsername() {
     } else {
         document.getElementById("usernameCheck").style.display = "none"
         document.getElementById("usernameError").style.display = "block"
-        // validation.textContent = "✗ Le nom d'utilisateur doit contenir au moins 3 caractères";
-        // validation.style.color = "red";
     }
 }
 
@@ -91,13 +84,16 @@ function checkUserMail() {
     }
 
     // Vérif. storage
-    const userDataSauv = localStorage.getItem("userData");
+    const usersListSauv = localStorage.getItem("usersList");
     let isUserMailTaken = false;
 
-    if (userDataSauv) {
-        const userData = JSON.parse(userDataSauv);
-        if (userData.userMail === userMail) {
-            isUserMailTaken = true;
+    if (usersListSauv) {
+        const usersList = JSON.parse(usersListSauv);
+        for (let user of usersList) {
+            if (user.userMail === userMail) {
+                isUserMailTaken = true;
+                break;
+            }
         }
     }
 
@@ -170,23 +166,25 @@ function comparePwd() {
 
 function submit() {
     // Vérification dans le localStorage
-    const userDataSauv = localStorage.getItem("userData");
+    const usersListSauv = localStorage.getItem("usersList");
     let isUsernameUntaken = true;
     let isUserMailUntaken = true;
+    const username = document.getElementById("username").value;
+    const userMail = document.getElementById("userMail").value;
 
-    if (userDataSauv) {
-        const userData = JSON.parse(userDataSauv);
-        if (userData.username === document.getElementById("username").value) {
-            isUsernameUntaken = false;
-        }
-        if (userData.userMail === document.getElementById("userMail").value) {
-            isUserMailUntaken = false;
+    if (usersListSauv) {
+        const usersList = JSON.parse(usersListSauv);
+        for (let user of usersList) {
+            if (user.username === username) {
+                isUsernameUntaken = false;
+            }
+            if (user.userMail === userMail) {
+                isUserMailUntaken = false;
+            }
         }
     }
 
     // Vérification des attentes
-    const username = document.getElementById("username").value;
-    const userMail = document.getElementById("userMail").value;
     const password = document.getElementById("password").value;
     const passwordBis = document.getElementById("passwordBis").value;
     const isUsernameValid = username.length >= 3;
@@ -208,26 +206,24 @@ function stockageUser() {
     const userMail = document.getElementById("userMail").value;
     const password = document.getElementById("password").value;
 
-    const userData = {
+    // Créer un objet pour le nouvel utilisateur
+    const newUser = {
         username: username,
         userMail: userMail,
         password: password
     };
 
-    localStorage.setItem('userData', JSON.stringify(userData));
+    // Récupérer la liste des utilisateurs existants ou créer un tableau vide
+    let usersList = JSON.parse(localStorage.getItem('usersList')) || [];
+    
+    // Ajouter le nouvel utilisateur à la liste
+    usersList.push(newUser);
+    
+    // Sauvegarder la liste mise à jour dans localStorage
+    localStorage.setItem('usersList', JSON.stringify(usersList));
+    
+    // Optionnel : Vider les champs du formulaire
+    document.getElementById("username").value = "";
+    document.getElementById("userMail").value = "";
+    document.getElementById("password").value = "";
 }
-
-// function connexion() {
-//     const userDataSauv = localStorage.getItem("userData");
-
-//  if (userDataSauv) {
-//     const userData = JSON.parse(userDataSauv);
-//     if (userData.username === document.getElementById("usernameCo").value) {
-//         document.getElementById("usernameCoCheck").style.display = "block"
-//     }
-//     if (userData.password === document.getElementById("passwordCo").value) {
-//         document.getElementById("passwordCoCheck").style.display = "block"
-//     }
-//  }
-
-// }
