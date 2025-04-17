@@ -51,6 +51,9 @@ function init() {
         if (userCo !== null) {
             afficherUser.textContent = userCo;
         }
+
+
+
     }
 }
 
@@ -304,17 +307,4 @@ function stockageUserConnexion() {
     let usernameCo = document.getElementById("usernameCo").value
 
     sessionStorage.setItem("userCo", usernameCo)
-}
-
-/* Fonction pour afficher en readonly l'username et l'adresse mail de la personne connectée */
-
-function afficherUserCo() {
-    console.log("hello")
-    let userCo = sessionStorage.getItem("userCo")
-    let afficherUser = document.getElementById("userCo")
-
-    if (userCo !== null) {
-        afficherUser.textContent = userCo;
-    }
-
 }
