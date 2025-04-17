@@ -27,46 +27,25 @@
       <fieldset>
         <h2 class="titreFormulaire">Mon profil</h2>
         <img id="ppUser" src="ressources1/question.svg" alt="Photo de profil">
-        <form action="#" method="post">
-          <div class="form">
+        <form id="formulaireProfil">
+          <div class="divProfil">
             <label for="userInscrit">Nom d'utilisateur</label>
-            <input
-              type="text"
-              name="userInscrit"
-              id="userInscrit"
-              title="Nom d'utilisateur"
-              pattern="[a-zA-Z]+"
-            />
+            <br>
+            <span id="userCo"></span>
           </div>
-          <div class="form">
-            <label for="mailInscrit">Adresse mail</label>
-            <input
-              type="email"
-              name="mailInscrit"
-              id="mailInscrit"
-              title="Nom d'utilisateur"
-            />
-          </div>
-          <div class="form">
+          <div class="divProfil">
             <label for="choixJeu">Choix du memory</label>
             <br>
             <select name="choixJeu" id="choixJeu">
               <option value="">Choisissez votre plateau</option>
               <option value="alphabet">Alphabet</option>
-              <option value="animaux">Animaux</option>
-              <option value="animauxAnimes">Animaux animés</option>
-              <option value="animauxDomestiques">Animaux domestiques</option>
               <option value="chiens">Chiens</option>
-              <option value="dinosaures">Dinosaures</option>
               <option value="legumes">Légumes</option>
             </select>
             <div id="imageChoixJeu">
           </div>
       </div>
-          
-          <br>
-          <br>
-          <div class="form">
+          <div class="divProfil">
             <label for="tailleJeu">Taille du plateau de jeu</label>
             <br>
             <select name="tailleJeu" id="tailleJeu">
@@ -74,7 +53,8 @@
               <option value="2par4">2 * 4</option>
               <option value="4par3">4 * 3</option>
               <option value="6par4">6 * 4</option>
-            </select></div>
+            </select>
+          </div>
           </div>
         </form>
       </fieldset>
