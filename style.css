@@ -262,10 +262,16 @@ input {
   transition: border-color 0.3s;
 }
 
-/* Centrer les fieldsets et leur contenu */
 #formProfil fieldset {
   border: none;
   padding: 0;
   margin: 0;
   width: 100%;
+}
+
+.imageChoixJeu {
+  display: none;
+  margin-top: 2%;
+  width: 35%;
+  height: auto;
 }

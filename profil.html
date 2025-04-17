@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profil - ENI Memory</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
-  </head>
 
-  <header id="header">
-    <div>
-      <h1 id="titreGeneral">ENI  <strong> - MEMORY </strong>- Mon profil</h1>
-    </div>
-  </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil - ENI Memory</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
 
-  <body>
-    <nav id="menuPrincipal">
-      <a href="index.html">Accueil</a>
-      <a href="inscription.html">S'inscrire</a>
-      <a href="connexion.html">Se connecter</a>
-      <a href="profil.html">Profil</a>
-      <a href="jouer.html">Jouer</a>
-    </nav>
+<header id="header">
+  <div>
+    <h1 id="titreGeneral">ENI <strong> - MEMORY </strong>- Mon profil</h1>
+  </div>
+</header>
 
-    <div id="formProfil">
-      <fieldset>
-        <h2 class="titreFormulaire">Mon profil</h2>
-        <img id="ppUser" src="ressources1/question.svg" alt="Photo de profil">
-        <form id="formulaireProfil">
-          <div class="divProfil">
-            <label for="userInscrit">Nom d'utilisateur</label>
-            <br>
-            <span id="userCo"></span>
+<body>
+  <nav id="menuPrincipal">
+    <a href="index.html">Accueil</a>
+    <a href="inscription.html">S'inscrire</a>
+    <a href="connexion.html">Se connecter</a>
+    <a href="profil.html">Profil</a>
+    <a href="jouer.html">Jouer</a>
+  </nav>
+
+  <div id="formProfil">
+    <fieldset>
+      <h2 class="titreFormulaire">Mon profil</h2>
+      <img id="ppUser" src="ressources1/question.svg" alt="Photo de profil">
+      <form id="formulaireProfil">
+        <div class="divProfil">
+          <label for="userInscrit">Nom d'utilisateur</label>
+          <br>
+          <span id="userCo"></span>
+        </div>
+        <div class="divProfil">
+          <label for="choixJeu">Choix du memory</label>
+          <br>
+          <select name="choixJeu" id="choixJeu">
+            <option value="">Choisissez votre plateau</option>
+            <option id="plateauChien" value="chiens">Chiens</option>
+            <option id="plateauLegume" value="legumes">Légumes</option>
+          </select>
+          <div id="imageChoixJeu">
+            <img class="imagesPlateau" id="imagePlateauChien" src="ressources1/memory_details_chiens.png" alt="Plateau memory chient">
+            <img class="imagesPlateau" id="imagePlateauLegume" src="ressources1/memory_detail.png" alt="Plateau memory légumes">
           </div>
-          <div class="divProfil">
-            <label for="choixJeu">Choix du memory</label>
-            <br>
-            <select name="choixJeu" id="choixJeu">
-              <option value="">Choisissez votre plateau</option>
-              <option value="alphabet">Alphabet</option>
-              <option value="chiens">Chiens</option>
-              <option value="legumes">Légumes</option>
-            </select>
-            <div id="imageChoixJeu">
-          </div>
-      </div>
-          <div class="divProfil">
-            <label for="tailleJeu">Taille du plateau de jeu</label>
-            <br>
-            <select name="tailleJeu" id="tailleJeu">
-              <option value="">Choisissez la taille</option>
-              <option value="2par4">2 * 4</option>
-              <option value="4par3">4 * 3</option>
-              <option value="6par4">6 * 4</option>
-            </select>
-          </div>
-          </div>
-        </form>
-      </fieldset>
-    </div>
-  </body>
+        </div>
+        <div class="divProfil">
+          <label for="tailleJeu">Taille du plateau de jeu</label>
+          <br>
+        </div>
+        <div class="divProfil">
+          <select name="tailleJeu" id="tailleJeu">
+            <option value="">Choisissez la taille</option>
+            <option value="2par4">2 * 4</option>
+            <option value="4par3">4 * 3</option>
+            <option value="6par4">6 * 4</option>
+          </select>
+        </div>
+  </div>
+  </div>
+  </form>
+  </fieldset>
+  </div>
+</body>
+
 </html>

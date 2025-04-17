@@ -308,3 +308,9 @@ function stockageUserConnexion() {
 
     sessionStorage.setItem("userCo", usernameCo)
 }
+
+/* Fonction pour afficher l'image du plateau sélectionné :
+- récupérer la valeur de l'input sélection.
+- la faire matcher avec une image.
+- faire apparaître l'image. */
+
