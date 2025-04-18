@@ -297,3 +297,15 @@ input {
   height: auto;
   display: none;
 }
+
+#plateauJeu {
+  border-width: 0px;
+  border-radius: 10px;
+  background-color: #333;
+  color: whitesmoke;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 20%;
+  padding: 3%;
+  width: auto;
+}
