@@ -52,8 +52,13 @@ function init() {
             afficherUser.textContent = userCo;
         }
 
+document.getElementById("choixJeu").addEventListener("change", choixPlateau)
 
-
+        document.getElementById("btnJouer").addEventListener("click", function(e) {
+            e.preventDefault(); // Empêche le comportement par défaut (si c'est un submit)
+            sauvegardePlateau();
+            redirectionJeu();
+        });
     }
 }
 
@@ -290,7 +295,7 @@ function connexion(event) {
         // On affiche seulement l'alerte si les deux champs sont remplis mais invalides
         if (usernameCo !== "" && passwordCo !== "") {
             btnConnexion.disabled = false;
-            alert("Erreur")
+            alert("L'identifiant ou le mot de passe est incorrect")
         }
     }
 }
@@ -314,3 +319,66 @@ function stockageUserConnexion() {
 - la faire matcher avec une image.
 - faire apparaître l'image. */
 
+function choixPlateau() {
+    let choixUtilisateur = document.getElementById("choixJeu").value;
+    let imageChien = document.getElementById("imagePlateauChien");
+    let imageLegume = document.getElementById("imagePlateauLegume");
+    let imageAnimauxDom = document.getElementById("imagePlateauAnimauxDom");
+    let imageDino = document.getElementById("imagePlateauDino");
+
+    // Afficher l'image correspondante
+    if (choixUtilisateur === "plateauChien") {
+        imageChien.style.display = "block";
+        imageLegume.style.display = "none";
+        imageDino.style.display = "none";
+        imageAnimauxDom.style.display = "none";
+    }
+    if (choixUtilisateur === "plateauLegume") {
+        imageLegume.style.display = "block";
+        imageChien.style.display = "none";
+        imageDino.style.display = "none";
+        imageAnimauxDom.style.display = "none";
+    }
+    if (choixUtilisateur === "plateauDino") {
+        imageLegume.style.display = "none";
+        imageChien.style.display = "none";
+        imageDino.style.display = "block";
+        imageAnimauxDom.style.display = "none";
+    }
+    if (choixUtilisateur === "plateauAnimauxDom") {
+        imageLegume.style.display = "none";
+        imageChien.style.display = "none";
+        imageDino.style.display = "none";
+        imageAnimauxDom.style.display = "block";
+    }
+
+    if (choixUtilisateur === "select") {
+        imageLegume.style.display = "none";
+        imageChien.style.display = "none";
+        imageDino.style.display = "none";
+        imageAnimauxDom.style.display = "none";
+    }
+
+    /*     imageChien.style.display = (choixUtilisateur === "plateauChien") ? "block" : "none";
+    imageLegume.style.display = (choixUtilisateur === "plateauLegume") ? "block" : "none";
+    imageDino.style.display = (choixUtilisateur === "plateauDino") ? "block" : "none";
+    imageAnimauxDom.style.display = (choixUtilisateur === "plateauAnimauxDom") ? "block" : "none"; */
+}
+
+/* Fonction de sauvegarde du choix de memory :
+- récupérer la valeur de l'input sélection.
+- la stocker dans une variable.
+- l'ajouter dans le sessionStorage. */
+
+function sauvegardePlateau() {
+    let choixUtilisateur = document.getElementById("choixJeu").value;
+    let choixUtilisateurTaille = document.getElementById("tailleJeu").value;
+
+
+    sessionStorage.setItem("choixPlateau", choixUtilisateur)
+    sessionStorage.setItem("taillePlateau", choixUtilisateurTaille)
+}
+
+function redirectionJeu() {
+    window.location.href = "jouer.html"
+}
