@@ -269,9 +269,31 @@ input {
   width: 100%;
 }
 
-.imageChoixJeu {
-  display: none;
+
+#imagePlateauChien {
   margin-top: 2%;
-  width: 35%;
+  width: 50%;
   height: auto;
+  display: none;
+}
+
+#imagePlateauLegume {
+  margin-top: 2%;
+  width: 50%;
+  height: auto;
+  display: none;
+}
+
+#imagePlateauDino {
+  margin-top: 2%;
+  width: 50%;
+  height: auto;
+  display: none;
+}
+
+#imagePlateauAnimauxDom {
+  margin-top: 2%;
+  width: 50%;
+  height: auto;
+  display: none;
 }
