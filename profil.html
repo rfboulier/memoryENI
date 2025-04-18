@@ -38,13 +38,17 @@
           <label for="choixJeu">Choix du memory</label>
           <br>
           <select name="choixJeu" id="choixJeu">
-            <option value="">Choisissez votre plateau</option>
-            <option id="plateauChien" value="chiens">Chiens</option>
-            <option id="plateauLegume" value="legumes">Légumes</option>
+            <option value="select">Choisissez votre plateau</option>
+            <option id="plateauChien" value="plateauChien">Chiens</option>
+            <option id="plateauLegume" value="plateauLegume">Légumes</option>
+            <option id="plateauDino" value="plateauDino">Dinosaures</option>
+            <option id="plateauAnimauxDom" value="plateauAnimauxDom">Animaux domestiques</option>
           </select>
           <div id="imageChoixJeu">
             <img class="imagesPlateau" id="imagePlateauChien" src="ressources1/memory_details_chiens.png" alt="Plateau memory chient">
             <img class="imagesPlateau" id="imagePlateauLegume" src="ressources1/memory_detail.png" alt="Plateau memory légumes">
+            <img class="imagesPlateau" id="imagePlateauDino" src="ressources1/memory_detail_dinosaures.png" alt="Plateau memory dinosaures">
+            <img class="imagesPlateau" id="imagePlateauAnimauxDom" src="ressources1/memory_detail_animaux_domestiques.png" alt="Plateau memory animaux domestiques">
           </div>
         </div>
         <div class="divProfil">
@@ -53,11 +57,14 @@
         </div>
         <div class="divProfil">
           <select name="tailleJeu" id="tailleJeu">
-            <option value="">Choisissez la taille</option>
+            <option value="select">Choisissez la taille</option>
             <option value="2par4">2 * 4</option>
             <option value="4par3">4 * 3</option>
             <option value="6par4">6 * 4</option>
           </select>
+        </div>
+        <div class="divProfil">
+          <button id="btnJouer" href="jouer.html">Jouer !</button>
         </div>
   </div>
   </div>
